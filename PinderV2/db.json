@@ -1,0 +1,32 @@
+{
+  "utilisateur": [
+    {
+      "id" : 1,
+      "email": "gohu@bebou.fr",
+      "pseudo": "jesuisGOHU",
+      "dateNaissance": "2000-12-08",
+      "snap": "el_pinolero",
+      "photo": "",
+      "likes": [
+        "second@test.fr"
+      ],
+      "pins": [
+        "second@test.fr"
+      ]
+    },
+    {
+      "id": 2,
+      "email": "second@test.fr",
+      "pseudo": "secondo",
+      "dateNaissance": "2000/05/05",
+      "snap": "el_secundo",
+      "photo": "",
+      "likes": [
+        "gohu@bebou.fr"
+      ],
+      "pins": [
+        "gohu@bebou.fr"
+      ]
+    }
+  ]
+}
