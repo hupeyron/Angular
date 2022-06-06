@@ -1,9 +1,10 @@
 {
   "utilisateur": [
     {
-      "id" : 1,
+      "id": 1,
       "email": "gohu@bebou.fr",
       "pseudo": "jesuisGOHU",
+      "motDePasse": "mdp",
       "dateNaissance": "2000-12-08",
       "snap": "el_pinolero",
       "photo": "",
@@ -18,6 +19,7 @@
       "id": 2,
       "email": "second@test.fr",
       "pseudo": "secondo",
+      "motDePasse": "mdp",
       "dateNaissance": "2000/05/05",
       "snap": "el_secundo",
       "photo": "",
@@ -27,6 +29,17 @@
       "pins": [
         "gohu@bebou.fr"
       ]
+    },
+    {
+      "email": "test2@test.fr",
+      "pseudo": "test2",
+      "motDePasse": "password",
+      "snap": "test22222",
+      "dateNaissance": "25-01-2003",
+      "photo": "",
+      "likes": [],
+      "pins": [],
+      "id": 4
     }
   ]
 }

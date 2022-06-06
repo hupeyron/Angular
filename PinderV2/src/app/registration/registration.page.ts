@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import axios from 'axios';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -24,11 +26,24 @@ export class RegistrationPage {
     ]
   }
 
-  constructor(public formBuilder: FormBuilder) { 
+  constructor(public formBuilder: FormBuilder, private route:Router) { 
   }
 
   submitForm() {    
-    console.log('email de l\'utilisateur :', this.user.email);
+    axios.post('http://localhost:3000/utilisateur', {
+        email: this.user.email,
+        pseudo: this.user.pseudo,
+        motDePasse: this.user.motDePasse,
+        snap: this.user.snap,
+        dateNaissance: this.user.dateNaissance,
+        photo: "",
+        likes: [],
+        pins: []
+    }).then(resp => {
+        this.route.navigate(['/home']);
+    }).catch(error => {
+        console.log(error);
+    });
   }
 
 }
