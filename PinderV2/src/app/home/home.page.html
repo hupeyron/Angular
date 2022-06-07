@@ -11,9 +11,18 @@
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-card *ngFor="let profil of default">
+      <img src="../../assets/profil/{{profil.photo}}" />
+      <ion-card-header>
+        <ion-card-subtitle>{{profil.dateNaissance}}</ion-card-subtitle>
+        <ion-card-title>{{profil.pseudo}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Voici une fausse description pour le moment afin de se rendre compte de ce que cela peut rendre
+      </ion-card-content>
+    </ion-card>
   </div>
+  <!-- Bouton de connexion et de création de compte -->
   <ion-grid>
     <ion-row>
       <ion-col align-self-center>
