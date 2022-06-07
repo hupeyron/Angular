@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import axios from 'axios';
+import { Storage } from '@ionic/storage';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class HomePage {
   default : any = [];
   data : any;
 
-  constructor() {
+  constructor(private storage: Storage) {
     axios.get('http://localhost:3000/profil_default')
     .then(resp => {
         this.data = resp.data;
@@ -25,13 +26,16 @@ export class HomePage {
               "description": p.description
             }
           this.default.push(profil);
-        });
-        console.log(this.default);
-        
+        });        
     })
     .catch(error => {
         console.log(error);
     });
+
+    this.storage.get('id').then((val) => {
+      console.log('ID : ', val);
+    });
+    
   }
   
 }

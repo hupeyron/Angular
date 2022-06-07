@@ -3,22 +3,22 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Log In</ion-title>
+    <ion-title>Connexion</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <form>
+  <form (ngSubmit)="submitForm()" novalidate>
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input  [(ngModel)]="user.email" type="text" name="email" required></ion-input>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input type="password"  [(ngModel)]="user.motDePasse" name="motDePasse" required></ion-input>
     </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Sign In</ion-button>
+        <ion-button type="submit" color="danger" expand="block">Connectez vous</ion-button>
       </ion-col>
     </ion-row>
   </form>
