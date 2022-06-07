@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import axios from 'axios';
 import { Storage } from '@ionic/storage';
 import { FormBuilder } from '@angular/forms';
+import { ToastController } from 'ionic-angular';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class LoginPage{
     "email": "",
     "motDePasse": "",
   }
-  constructor(public formBuilder: FormBuilder, private route:Router, private storage: Storage) {
+  constructor(public formBuilder: FormBuilder, private route:Router, private storage: Storage, private toastCtrl: ToastController) {
   }
 
   submitForm() {
@@ -37,8 +38,12 @@ export class LoginPage{
           //redirect to /home
           this.route.navigate(['/home']);
         } else {
-          // retourner une erreur
-          console.log("erreur lors de la connexion");
+          let toast = this.toastCtrl.create({
+            message: 'Email ou mot de passe incorrect',
+            duration: 2000,
+            position: 'top'
+          });
+          toast.present();
           
         }
     })
