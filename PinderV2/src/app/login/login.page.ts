@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 import axios from 'axios';
 import { Storage } from '@ionic/storage';
 import { FormBuilder } from '@angular/forms';
-import { ToastController } from 'ionic-angular';
+import { ToastController } from '@ionic/angular';
 
 
 @Component({
@@ -28,7 +28,7 @@ export class LoginPage{
         email: this.user.email,
         motDePasse: this.user.motDePasse
       }
-      }).then(resp => {
+      }).then(async resp => {
         this.data = resp.data;
         if (this.data.length == 1){
           this.data.forEach(p => {
@@ -41,9 +41,10 @@ export class LoginPage{
           let toast = this.toastCtrl.create({
             message: 'Email ou mot de passe incorrect',
             duration: 2000,
-            position: 'top'
+            position: 'top',
+            color: 'danger'
           });
-          toast.present();
+          (await toast).present();
           
         }
     })
