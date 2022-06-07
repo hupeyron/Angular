@@ -22,6 +22,7 @@ export class HomePage {
               "pseudo": p.pseudo,
               "dateNaissance": p.dateNaissance,
               "photo": p.photo,
+              "description": p.description
             }
           this.default.push(profil);
         });

@@ -18,6 +18,7 @@ export class RegistrationPage {
     "dateNaissance": "",
     "snap": "",
     "photo": "",
+    "description": "",
     "likes": [
       "second@test.fr"
     ],

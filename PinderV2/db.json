@@ -4,13 +4,15 @@
       "id": 1,
       "pseudo": "ProfilParDéfaut",
       "dateNaissance": "1998-02-11",
-      "photo": "default_1.jpg"
+      "photo": "default_1.jpg",
+      "description": "voici une description"
     },
     {
       "id": 2,
       "pseudo": "JeSuisRien",
       "dateNaissance": "1995-11-22",
-      "photo": "default_1.jpg"
+      "photo": "default_1.jpg",
+      "description": "voici une description pour le second default profile"
     }
   ],
   "utilisateur": [
@@ -22,6 +24,7 @@
       "dateNaissance": "2000-12-08",
       "snap": "el_pinolero",
       "photo": "",
+      "description": "voici une description",
       "likes": [
         "second@test.fr"
       ],
@@ -37,6 +40,7 @@
       "dateNaissance": "2000/05/05",
       "snap": "el_secundo",
       "photo": "",
+      "description": "voici une description",
       "likes": [
         "gohu@bebou.fr"
       ],
@@ -51,6 +55,7 @@
       "snap": "test22222",
       "dateNaissance": "25-01-2003",
       "photo": "",
+      "description": "voici une description",
       "likes": [],
       "pins": [],
       "id": 4
