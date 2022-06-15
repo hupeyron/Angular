@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
+import {Router} from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +10,18 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class AppComponent {
   navigate: any;
+  showButton : any=false;
 
-  constructor(private storage: Storage) {this.sideMenu();}
-
-  async ngOnInit() {
-    // If using a custom driver:
-    // await this.storage.defineDriver(MyCustomDriver)
-    await this.storage.create();
+  constructor(private storage: Storage, private route:Router, private toastCtrl: ToastController) {
+    this.storage.create();
+    this.sideMenu();
+    this.storage.get('id').then((val) => {
+      if (val != ""){
+        this.showButton = true;
+      }
+    });
   }
-
+  
   sideMenu() {
        this.navigate =
        [
@@ -38,4 +43,17 @@ export class AppComponent {
          },
        ];
      }
+
+     logout(event) {    
+      this.storage.remove("id").then(async resp => {
+        this.route.navigate(['/']);
+        let toast = this.toastCtrl.create({
+          message: 'Vous etes déconnecté !',
+          duration: 2000,
+          position: 'top',
+          color: 'danger'
+        });
+        (await (toast)).present();
+      })
+    }
 }

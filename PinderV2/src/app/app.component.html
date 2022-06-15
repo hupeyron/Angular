@@ -14,6 +14,11 @@
           </ion-item>
         </ion-menu-toggle>
       </ion-list>
+      <ion-list>
+        <button ion-button (click)="logout($event)" class="button-logout" *ngIf="showButton">
+          Log Out
+        </button>
+      </ion-list>
     </ion-content>
   </ion-menu>
   <ion-router-outlet Id="content"></ion-router-outlet>
