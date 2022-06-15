@@ -4,13 +4,38 @@
       <ion-menu-button color="dark"></ion-menu-button>
     </ion-buttons>
     <ion-title class="ion-text-center">
-      <ion-label>Pinder</ion-label>
+        <img src="../../assets/icon/logo_Pinder.png"  height="40px" />
+        <ion-label>Pinder</ion-label>
+      
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div id="container">
+  <div class="slide-box" >
+    <ion-slides #slides [options]="sliderConfig">
+      <ion-slide *ngFor="let profil of default">
+        <ion-card >
+          <img src="../../assets/profil/{{profil.photo}}" />
+          <ion-card-header>
+            <ion-card-subtitle>{{profil.dateNaissance}}</ion-card-subtitle>
+            <ion-card-title>{{profil.pseudo}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{profil.description}}
+          </ion-card-content>
+          <button ion-button icon-end outline (click)="piner(slides)">
+            Piner
+            </button>
+            <button ion-button icon-end outline (click)="nexter(slides)">
+              C'est Next
+              </button>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  
+  <!--<div id="container">
     <ion-card *ngFor="let profil of default">
       <img src="../../assets/profil/{{profil.photo}}" />
       <ion-card-header>
@@ -21,7 +46,7 @@
         {{profil.description}}
       </ion-card-content>
     </ion-card>
-  </div>
+  </div>-->
   <!-- Bouton de connexion et de création de compte -->
   
 

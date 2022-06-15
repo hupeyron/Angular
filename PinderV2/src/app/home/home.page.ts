@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import axios from 'axios';
 import { Storage } from '@ionic/storage';
+import { ToastController, NavController, IonSlides } from '@ionic/angular';
 
 
 @Component({
@@ -13,7 +14,14 @@ export class HomePage {
   default : any = [];
   data : any;
 
-  constructor(private storage: Storage) {
+  sliderConfig = {
+    allowSlidePrev: false,
+    allowSwipe: false,
+    centeredSlides: true,
+ 
+   }
+
+  constructor(private storage: Storage, private toastCtrl: ToastController,public navCtrl: NavController) {
     axios.get('http://localhost:3000/profil_default')
     .then(resp => {
         this.data = resp.data;
@@ -35,7 +43,28 @@ export class HomePage {
     this.storage.get('id').then((val) => {
       console.log('ID : ', val);
     });
-    
   }
+
+  async piner(slides){
+    let toast = this.toastCtrl.create({
+      message: 'je pine',
+      duration: 2000,
+      position: 'top',
+      color: 'danger'
+    });
+    (await (toast)).present();
+    slides.slideNext(); 
+   }
+
+   async nexter(slides){
+    let toast = this.toastCtrl.create({
+      message: 'je next',
+      duration: 2000,
+      position: 'top',
+      color: 'danger'
+    });
+    (await (toast)).present();
+    slides.slideNext(); 
+   }
   
 }
