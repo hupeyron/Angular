@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      <ion-label>Pinder</ion-label>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="submitForm()" novalidate>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="user.email" type="text" name="email"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Pseudo</ion-label>
+      <ion-input [(ngModel)]="user.pseudo"  type="text" name="pseudo" ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Snapchat</ion-label>
+      <ion-input [(ngModel)]="user.snap"  type="text" name="snap"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Date de Naissance</ion-label>
+      <ion-input [(ngModel)]="user.dateNaissance"  type="text" name="dateNaissance"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Description</ion-label>
+      <ion-input [(ngModel)]="user.description"  type="text" name="description"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input [(ngModel)]="user.motDePasse"  type="password" name="motDePasse"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Update</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

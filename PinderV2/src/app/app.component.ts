@@ -39,7 +39,7 @@ export class AppComponent {
          },
          {
            title : 'Votre compte',
-           url   : '#',
+           url   : '/compte',
          },
        ];
      }

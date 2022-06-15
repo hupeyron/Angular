@@ -20,10 +20,8 @@ export class RegistrationPage {
     "photo": "",
     "description": "",
     "likes": [
-      "second@test.fr"
     ],
     "pins": [
-      "second@test.fr"
     ]
   }
 
@@ -37,9 +35,9 @@ export class RegistrationPage {
         motDePasse: this.user.motDePasse,
         snap: this.user.snap,
         dateNaissance: this.user.dateNaissance,
-        photo: "",
-        likes: [],
-        pins: []
+        photo: this.user.photo,
+        likes: this.user.likes,
+        pins: this.user.pins
     }).then(resp => {
         this.route.navigate(['/home']);
     }).catch(error => {

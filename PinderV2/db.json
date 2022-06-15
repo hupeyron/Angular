@@ -51,14 +51,22 @@
     {
       "email": "test2@test.fr",
       "pseudo": "test2",
+      "description": "c'est la nouvelle desc",
       "motDePasse": "password",
-      "snap": "test22222",
+      "snap": "test11111111",
       "dateNaissance": "25-01-2003",
+      "id": 4
+    },
+    {
+      "email": "tungronaz@aled.mastu.loat.cbonpourvous.nz",
+      "pseudo": "danielouuu",
+      "motDePasse": "danielou",
+      "snap": "loudaniel",
+      "dateNaissance": "01/01/2000",
       "photo": "",
-      "description": "voici une description",
       "likes": [],
       "pins": [],
-      "id": 4
+      "id": 5
     }
   ]
 }
