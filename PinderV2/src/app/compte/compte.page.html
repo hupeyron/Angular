@@ -32,6 +32,10 @@
       <ion-input [(ngModel)]="user.description"  type="text" name="description"></ion-input>
     </ion-item>
     <ion-item lines="full">
+      <ion-label position="floating">Photo</ion-label>
+      <ion-input [(ngModel)]="user.photo"  type="file" name="photo"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
       <ion-label position="floating">Mot de passe</ion-label>
       <ion-input [(ngModel)]="user.motDePasse"  type="password" name="motDePasse"></ion-input>
     </ion-item>

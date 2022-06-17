@@ -5,6 +5,8 @@ import {Router} from '@angular/router';
 import { Storage } from '@ionic/storage';
 import { ToastController } from '@ionic/angular';
 
+import { Camera } from '@ionic-native/camera/ngx'
+
 
 @Component({
   selector: 'app-compte',
@@ -54,8 +56,12 @@ export class ComptePage{
         description: this.user.description,
         motDePasse: this.user.motDePasse,
         snap: this.user.snap,
+        photo: this.user.photo,
         dateNaissance: this.user.dateNaissance
     }).then(async resp => {
+      console.log(this.user.photo);
+      //Gérer photos pour mettre dans assets/profil
+      
       let toast = this.toastCtrl.create({
         message: 'Vos informations ont étés modifiées',
         duration: 2000,

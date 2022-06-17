@@ -29,6 +29,7 @@ export class LoginPage{
         motDePasse: this.user.motDePasse
       }
       }).then(async resp => {
+        console.log("test2");
         this.data = resp.data;
         if (this.data.length == 1){
           this.data.forEach(p => {

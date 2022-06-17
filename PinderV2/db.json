@@ -54,6 +54,7 @@
       "description": "c'est la nouvelle desc",
       "motDePasse": "password",
       "snap": "test11111111",
+      "photo": "C:\\fakepath\\meme11.PNG",
       "dateNaissance": "25-01-2003",
       "id": 4
     },
