@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
 import {Router} from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import 'hammerjs';
 
 @Component({
   selector: 'app-root',
@@ -31,7 +32,7 @@ export class AppComponent {
            },
          {
            title : 'Piner',
-           url   : '#',
+           url   : '/piner',
          },
          {
            title : 'Vos pin',

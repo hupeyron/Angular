@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>piner</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <sw-card-wrapper #cardWrapper>
+    <div class="card" *ngFor="let profil of default, let index = index"
+    class.visible="profil.visible" class.hidden="!profil.visible"
+     swSwipeable
+     width="350"
+     height="500"
+     orientation="'x'"
+     (swiped)="swiped($event, index)">
+     <img src="../../assets/profil/{{profil.photo}}">
+      <h2>{{profil.pseudo}}</h2>
+    </div>
+</sw-card-wrapper>
+<div class="button_box">
+  <ion-button (click)="swipeleft()" mode="ios" class="large_button" shape="round" fill="outline" >
+    <ion-icon color="danger" name="close"></ion-icon>
+  </ion-button>
+  <div class="space"></div>
+  <ion-button (click)="swiperight()" mode="ios" class="large_button" shape="round" fill="outline">
+    <ion-icon color="success" name="heart"></ion-icon>
+  </ion-button>
+</div> 
+    
+</ion-content>
+

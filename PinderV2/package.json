@@ -27,8 +27,13 @@
     "@ionic/storage": "^3.0.6",
     "@ionic/storage-angular": "^3.0.6",
     "axios": "^0.27.2",
+<<<<<<< Updated upstream
     "ionic-native": "^2.9.0",
+=======
+    "hammerjs": "^2.0.8",
+>>>>>>> Stashed changes
     "json-server": "^0.17.0",
+    "ng-swipe-card": "0.0.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"

@@ -5,14 +5,16 @@
       "pseudo": "ProfilParDéfaut",
       "dateNaissance": "1998-02-11",
       "photo": "default_1.jpg",
-      "description": "voici une description"
+      "description": "voici une description",
+      "visible": true
     },
     {
       "id": 2,
       "pseudo": "JeSuisRien",
       "dateNaissance": "1995-11-22",
       "photo": "default_2.jpg",
-      "description": "voici une description pour le second default profile"
+      "description": "voici une description pour le second default profile",
+      "visible": true
     }
   ],
   "utilisateur": [

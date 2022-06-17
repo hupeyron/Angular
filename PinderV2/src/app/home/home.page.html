@@ -12,30 +12,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="slide-box" >
-    <ion-slides #slides [options]="sliderConfig">
-      <ion-slide *ngFor="let profil of default">
-        <ion-card >
-          <img src="../../assets/profil/{{profil.photo}}" />
-          <ion-card-header>
-            <ion-card-subtitle>{{profil.dateNaissance}}</ion-card-subtitle>
-            <ion-card-title>{{profil.pseudo}}</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            {{profil.description}}
-          </ion-card-content>
-          <button ion-button icon-end outline (click)="piner(slides)">
-            Piner
-            </button>
-            <button ion-button icon-end outline (click)="nexter(slides)">
-              C'est Next
-              </button>
-        </ion-card>
-      </ion-slide>
-    </ion-slides>
-  </div>
-  
-  <!--<div id="container">
+  <div id="container">
     <ion-card *ngFor="let profil of default">
       <img src="../../assets/profil/{{profil.photo}}" />
       <ion-card-header>
@@ -46,7 +23,7 @@
         {{profil.description}}
       </ion-card-content>
     </ion-card>
-  </div>-->
+  </div>
   <!-- Bouton de connexion et de création de compte -->
   
 
