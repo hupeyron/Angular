@@ -47,20 +47,43 @@ export class PinerPage {
     
   }
 
-   swiped(event: any, index: number) {
+  async swiped(event: any, index: number) {
     console.log(this.currentIndex);
     this.default[index].visible = false;
     this.currentIndex--;
+    let toast = this.toastCtrl.create({
+      message: 'swipe normal',
+      duration: 2000,
+      position: 'top',
+      color: 'light'
+    });
+    (await (toast)).present();
   }
 
-  swipeleft() {
+  async swipeleft() {
     this.default[this.currentIndex].visible = false;
     this.currentIndex--;
+    console.log(this.currentIndex);
+    let toast = this.toastCtrl.create({
+      message: 'next',
+      duration: 2000,
+      position: 'top',
+      color: 'light'
+    });
+    (await (toast)).present();
   }
 
-  swiperight() {
+  async swiperight() {
     this.default[this.currentIndex].visible = false;
     this.currentIndex--;
+    console.log(this.currentIndex);
+    let toast = this.toastCtrl.create({
+      message: 'pine',
+      duration: 2000,
+      position: 'top',
+      color: 'light'
+    });
+    (await (toast)).present();
   }
 
 }

@@ -7,11 +7,11 @@
 <ion-content [fullscreen]="true">
   <sw-card-wrapper #cardWrapper>
     <div class="card" *ngFor="let profil of default, let index = index"
-    class.visible="profil.visible" class.hidden="!profil.visible"
+     [class.visible]="profil.visible" [class.hidden]="!profil.visible"
      swSwipeable
      width="350"
      height="500"
-     orientation="'x'"
+     orientation="x"
      (swiped)="swiped($event, index)">
      <img src="../../assets/profil/{{profil.photo}}">
       <h2>{{profil.pseudo}}</h2>
