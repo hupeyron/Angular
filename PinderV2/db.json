@@ -15,6 +15,29 @@
       "photo": "default_2.jpg",
       "description": "voici une description pour le second default profile",
       "visible": true
+    },
+    {
+      "id": 3,
+      "pseudo": "JeSuisRien",
+      "dateNaissance": "1995-11-22",
+      "photo": "default_1.jpg",
+      "description": "voici une description pour le second default profile",
+      "visible": true
+    },
+    {
+      "id": 4,
+      "pseudo": "JeSuisRien",
+      "dateNaissance": "1995-11-22",
+      "photo": "default_2.jpg",
+      "description": "voici une description pour le second default profile",
+      "visible": true
+    },{
+      "id": 5,
+      "pseudo": "JeSuisRien",
+      "dateNaissance": "1995-11-22",
+      "photo": "default_1.jpg",
+      "description": "voici une description pour le second default profile",
+      "visible": true
     }
   ],
   "utilisateur": [

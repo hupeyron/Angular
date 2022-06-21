@@ -22,17 +22,12 @@ import { FilePath } from '@ionic-native/file-path/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-<<<<<<< Updated upstream
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IonicStorageModule.forRoot(), HttpClientModule,],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IonicStorageModule.forRoot(), HttpClientModule,SwipeCardLibModule,],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     Camera,
     File,
     WebView,
     FilePath],
-=======
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IonicStorageModule.forRoot(), SwipeCardLibModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
->>>>>>> Stashed changes
   bootstrap: [AppComponent],
 })
 export class AppModule {}
