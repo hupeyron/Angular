@@ -2,41 +2,50 @@
   "profil_default": [
     {
       "id": 1,
-      "pseudo": "ProfilParDéfaut",
+      "pseudo": "1",
       "dateNaissance": "1998-02-11",
       "photo": "default_1.jpg",
-      "description": "voici une description",
+      "description": "voici une description 1",
       "visible": true
     },
     {
       "id": 2,
-      "pseudo": "JeSuisRien",
+      "pseudo": "2",
       "dateNaissance": "1995-11-22",
       "photo": "default_2.jpg",
-      "description": "voici une description pour le second default profile",
+      "description": "voici une description pour le second default profile 2",
       "visible": true
     },
     {
       "id": 3,
-      "pseudo": "JeSuisRien",
+      "pseudo": "3",
       "dateNaissance": "1995-11-22",
       "photo": "default_1.jpg",
-      "description": "voici une description pour le second default profile",
+      "description": "voici une description pour le second default profile 3",
       "visible": true
     },
     {
       "id": 4,
-      "pseudo": "JeSuisRien",
+      "pseudo": "4",
       "dateNaissance": "1995-11-22",
       "photo": "default_2.jpg",
-      "description": "voici une description pour le second default profile",
+      "description": "voici une description pour le second default profile 4",
       "visible": true
-    },{
+    },
+    {
       "id": 5,
-      "pseudo": "JeSuisRien",
+      "pseudo": "5",
       "dateNaissance": "1995-11-22",
       "photo": "default_1.jpg",
-      "description": "voici une description pour le second default profile",
+      "description": "voici une description pour le second default profile 5",
+      "visible": true
+    },
+    {
+      "id": 6,
+      "pseudo": "6",
+      "dateNaissance": "1995-11-22",
+      "photo": "default_2.jpg",
+      "description": "voici une description pour le second default profile 6",
       "visible": true
     }
   ],

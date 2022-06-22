@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 import { Storage } from '@ionic/storage';
 import { ToastController, NavController, IonSlides } from '@ionic/angular';
+import { RouteReuseStrategy } from '@angular/router';
 
 
 @Component({
@@ -21,6 +22,15 @@ export class PinerPage {
  
    }
   constructor(private storage: Storage, private toastCtrl: ToastController,public navCtrl: NavController) { 
+    this.recupererDefauts();
+
+    this.storage.get('id').then((val) => {
+      console.log('ID : ', val);
+    });
+    
+  }
+
+  recupererDefauts(){
     axios.get('http://localhost:3000/profil_default')
     .then(resp => {
         this.data = resp.data;
@@ -40,15 +50,9 @@ export class PinerPage {
     .catch(error => {
         console.log(error);
     });
-
-    this.storage.get('id').then((val) => {
-      console.log('ID : ', val);
-    });
-    
   }
 
   async swiped(event: any, index: number) {
-    console.log(this.currentIndex);
     this.default[index].visible = false;
     this.currentIndex--;
     let toast = this.toastCtrl.create({
@@ -61,9 +65,12 @@ export class PinerPage {
   }
 
   async swipeleft() {
+    if(this.testFinListe() == 1){
+      return;
+    }
+    console.log(this.currentIndex);
     this.default[this.currentIndex].visible = false;
     this.currentIndex--;
-    console.log(this.currentIndex);
     let toast = this.toastCtrl.create({
       message: 'next',
       duration: 2000,
@@ -74,9 +81,14 @@ export class PinerPage {
   }
 
   async swiperight() {
-    this.default[this.currentIndex].visible = false;
-    this.currentIndex--;
+    if(this.testFinListe() == 1){
+      return;
+    }
     console.log(this.currentIndex);
+    this.default[this.currentIndex].visible = false;
+    this.pin();
+    this.currentIndex--;
+    
     let toast = this.toastCtrl.create({
       message: 'pine',
       duration: 2000,
@@ -84,6 +96,26 @@ export class PinerPage {
       color: 'light'
     });
     (await (toast)).present();
+  }
+
+  pin(){
+    this.default.splice(this.currentIndex,1);
+  }
+
+  testFinListe(){
+    if(this.currentIndex == 0){
+      this.default[this.currentIndex].visible = false;
+      if(this.default.length == 1){
+        //chose à faire quand on à tout liké
+        this.default = [];
+        this.recupererDefauts();
+      }
+      this.currentIndex = this.default.length-1;
+      this.default.forEach((element)=>{
+        element.visible = true;
+     });
+      return 1;
+    }
   }
 
 }
