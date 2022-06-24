@@ -12,21 +12,24 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div id="container">
-    <ion-card *ngFor="let profil of default">
-      <img src="../../assets/profil/{{profil.photo}}" />
-      <ion-card-header>
-        <ion-card-subtitle>{{profil.dateNaissance}}</ion-card-subtitle>
-        <ion-card-title>{{profil.pseudo}}</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        {{profil.description}}
-      </ion-card-content>
-    </ion-card>
-  </div>
-  <!-- Bouton de connexion et de création de compte -->
-  
-
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" size-sm="6" size-md="3" size-lg="2" *ngFor="let profil of default" >
+        <ion-card class="ionCardAccueil">
+          <ion-thumbnail style="width:100%; height:300px;">
+            <ion-img class="card-img" src="../../assets/profil/{{profil.photo}}" style="height: 100%;" ></ion-img>
+          </ion-thumbnail>
+          <ion-card-header>
+            <ion-card-subtitle>{{profil.dateNaissance}}</ion-card-subtitle>
+            <ion-card-title>{{profil.pseudo}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{profil.description}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 
 <ion-footer collapse="fade">

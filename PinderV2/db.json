@@ -2,7 +2,7 @@
   "profil_default": [
     {
       "id": 1,
-      "pseudo": "1",
+      "pseudo": "Jean Neymar",
       "dateNaissance": "1998-02-11",
       "photo": "default_1.jpg",
       "description": "voici une description 1",
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "pseudo": "2",
+      "pseudo": "Jean Terre",
       "dateNaissance": "1995-11-22",
       "photo": "default_2.jpg",
       "description": "voici une description pour le second default profile 2",
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "pseudo": "3",
+      "pseudo": "Jean Tube",
       "dateNaissance": "1995-11-22",
       "photo": "default_1.jpg",
       "description": "voici une description pour le second default profile 3",
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "pseudo": "4",
+      "pseudo": "Jean Robe",
       "dateNaissance": "1995-11-22",
       "photo": "default_2.jpg",
       "description": "voici une description pour le second default profile 4",
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "pseudo": "5",
+      "pseudo": "Jean Bon",
       "dateNaissance": "1995-11-22",
       "photo": "default_1.jpg",
       "description": "voici une description pour le second default profile 5",
@@ -42,7 +42,7 @@
     },
     {
       "id": 6,
-      "pseudo": "6",
+      "pseudo": "Jean Flure",
       "dateNaissance": "1995-11-22",
       "photo": "default_2.jpg",
       "description": "voici une description pour le second default profile 6",
@@ -51,20 +51,14 @@
   ],
   "utilisateur": [
     {
-      "id": 1,
       "email": "gohu@bebou.fr",
       "pseudo": "jesuisGOHU",
-      "motDePasse": "mdp",
-      "dateNaissance": "2000-12-08",
-      "snap": "el_pinolero",
-      "photo": "",
       "description": "voici une description",
-      "likes": [
-        "second@test.fr"
-      ],
-      "pins": [
-        "second@test.fr"
-      ]
+      "motDePasse": "mdp",
+      "snap": "el_pinolero",
+      "photo": "C:\\fakepath\\hugo_peyron.png",
+      "dateNaissance": "2000-12-08",
+      "id": 1
     },
     {
       "id": 2,

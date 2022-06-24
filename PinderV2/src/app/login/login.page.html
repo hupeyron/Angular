@@ -6,20 +6,34 @@
     <ion-title>Connexion</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
-  <form (ngSubmit)="submitForm()" novalidate>
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input  [(ngModel)]="user.email" type="text" name="email" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Mot de passe</ion-label>
-      <ion-input type="password"  [(ngModel)]="user.motDePasse" name="motDePasse" required></ion-input>
-    </ion-item>
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Connectez vous</ion-button>
-      </ion-col>
-    </ion-row>
-  </form>
+  <ion-grid class="contentLogin">
+    <form (ngSubmit)="submitForm()" novalidate>
+      <ion-card class="loginCard">
+        <ion-col>
+          <ion-grid>
+            <ion-title class="ion-text-center">
+              <img src="../../assets/icon/logo_Pinder.png"  height="40px" />
+              <ion-label>Pinder</ion-label>
+            </ion-title>
+          </ion-grid>
+          <ion-grid>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input  [(ngModel)]="user.email" type="text" name="email" required></ion-input>
+          </ion-grid>
+          <ion-grid>
+            <ion-label position="floating">Mot de passe</ion-label>
+            <ion-input type="password"  [(ngModel)]="user.motDePasse" name="motDePasse" required></ion-input>
+          </ion-grid>
+          <ion-grid>
+            <ion-button type="submit" color="danger" expand="block">Connectez vous</ion-button>
+          </ion-grid>
+        </ion-col>
+      </ion-card>
+    </form>
+  </ion-grid>
+  
+    
+
 </ion-content>

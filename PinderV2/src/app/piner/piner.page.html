@@ -1,6 +1,13 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>piner</ion-title>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+        <img src="../../assets/icon/logo_Pinder.png"  height="40px" />
+        <ion-label>Pinder</ion-label>
+      
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -17,15 +24,19 @@
       <h2>{{profil.pseudo}}</h2>
     </div>
 </sw-card-wrapper>
-<div class="button_box">
-  <ion-button (click)="swipeleft()" mode="ios" class="large_button" shape="round" fill="outline" >
-    <ion-icon color="danger" name="close"></ion-icon>
-  </ion-button>
-  <div class="space"></div>
-  <ion-button (click)="swiperight()" mode="ios" class="large_button" shape="round" fill="outline">
-    <ion-icon color="success" name="heart"></ion-icon>
-  </ion-button>
-</div> 
+<ion-grid class="Button_Action_flex">
+  <div>
+    <ion-button (click)="swipeleft()" mode="ios" class="large_button" shape="round" fill="outline" >
+      <ion-icon color="danger" name="close"></ion-icon>
+    </ion-button>
+  </div>
+  <div>
+    <ion-button (click)="swiperight()" mode="ios" class="large_button" shape="round" fill="outline">
+      <ion-icon color="success" name="heart"></ion-icon>
+    </ion-button>
+  </div>
+</ion-grid>
+
     
 </ion-content>
 

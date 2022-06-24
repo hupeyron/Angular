@@ -59,7 +59,7 @@ export class PinerPage {
       message: 'swipe normal',
       duration: 2000,
       position: 'top',
-      color: 'light'
+      color: 'light',
     });
     (await (toast)).present();
   }
@@ -75,7 +75,9 @@ export class PinerPage {
       message: 'next',
       duration: 2000,
       position: 'top',
-      color: 'light'
+      color: 'light',
+      icon: "heart-dislike-outline"
+
     });
     (await (toast)).present();
   }
@@ -93,7 +95,8 @@ export class PinerPage {
       message: 'pine',
       duration: 2000,
       position: 'top',
-      color: 'light'
+      color: 'light',
+      icon: "heart-outline"
     });
     (await (toast)).present();
   }

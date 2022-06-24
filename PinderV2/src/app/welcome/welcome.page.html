@@ -1,21 +1,37 @@
 <ion-header>
-  <ion-toolbar color="light">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title class="ion-text-center">
-      <img style="display:inline-block" height="40px" src="../../assets/icon/logo_Pinder.png"/>
+      <img src="../../assets/icon/logo_Pinder.png"  height="40px" />
       <ion-label>Pinder</ion-label>
-    </ion-title>
+    
+  </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col align-self-center>
-        <button ion-button [routerLink]="['/registration']" expand="block" class="button-welcome button-register">Inscription</button>
-        <span class="divider line one-line">or</span>
-        <span class="already">Already a user?</span>
-        <button ion-button [routerLink]="['/login']" expand="block" class="button-welcome button-login">Connexion</button>
-      </ion-col>
-    </ion-row>
+<ion-content >
+  <ion-grid class="HomeDisplayFlex">
+
+    <ion-card class="contentFlex" >
+       
+      <ion-row>
+        <ion-col align-self-center>
+          
+          <ion-grid>
+            <button ion-button [routerLink]="['/registration']" expand="block" class="button-welcome button-register">Inscription</button>
+          </ion-grid>
+          <ion-grid>
+            <span class="divider line one-line">or</span>
+            <span class="already">Already a user?</span>
+          </ion-grid>
+          <ion-grid>
+            <button ion-button [routerLink]="['/login']" expand="block" class="button-welcome button-login">Connexion</button>
+          </ion-grid>
+         </ion-col>
+      </ion-row>
+    </ion-card>
+   
   </ion-grid>
 </ion-content>
