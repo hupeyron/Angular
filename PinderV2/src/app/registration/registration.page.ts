@@ -29,7 +29,7 @@ export class RegistrationPage {
   }
 
   submitForm() {    
-    axios.post('http://localhost:3000/utilisateur', {
+    axios.post('https://angular-json-db.herokuapp.com/utilisateur', {
         email: this.user.email,
         pseudo: this.user.pseudo,
         motDePasse: this.user.motDePasse,

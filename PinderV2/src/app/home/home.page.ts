@@ -21,12 +21,8 @@ export class HomePage {
  
    }
 
-  constructor(
-    private storage: Storage, 
-    private toastCtrl: ToastController,
-    public navCtrl: NavController) 
-  {
-    axios.get('http://localhost:3000/profil_default')
+  constructor(private storage: Storage, private toastCtrl: ToastController,public navCtrl: NavController) {
+    axios.get('https://angular-json-db.herokuapp.com/profil_default')
     .then(resp => {
         this.data = resp.data;
         this.data.forEach(p => {
