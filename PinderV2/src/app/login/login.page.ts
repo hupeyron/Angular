@@ -3,7 +3,8 @@ import {Router} from '@angular/router';
 import axios from 'axios';
 import { Storage } from '@ionic/storage';
 import { FormBuilder } from '@angular/forms';
-import { ToastController } from '@ionic/angular';
+import { ToastController } from '@ionic/angular'
+import { UtilisateurService } from 'src/service/utilisateurService';
 
 
 @Component({
@@ -19,7 +20,44 @@ export class LoginPage{
     "email": "",
     "motDePasse": "",
   }
-  constructor(public formBuilder: FormBuilder, private route:Router, private storage: Storage, private toastCtrl: ToastController) {
+  constructor(
+    public formBuilder: FormBuilder, 
+    private route:Router, 
+    private storage: Storage, 
+    private toastCtrl: ToastController,
+    private userService: UtilisateurService
+    ) {
+  }
+
+  ngOnInit(){}
+
+  async connexion(){
+    let result:boolean = this.userService.connection(this.user.email,this.user.motDePasse);
+    
+
+    if(result === true){
+      let toast = this.toastCtrl.create({
+        message: 'correct',
+        duration: 2000,
+        position: 'top',
+        color: 'success'
+      });
+      (await toast).present();
+
+      this.userService.getUsersConnect().id
+      this.storage.set('id', this.userService.getUsersConnect().id);
+
+      this.route.navigate(['/home']);
+      
+    }else{
+      let toast = this.toastCtrl.create({
+        message: 'Email ou mot de passe incorrect',
+        duration: 2000,
+        position: 'top',
+        color: 'danger'
+      });
+      (await toast).present();
+    }
   }
 
   submitForm() {
