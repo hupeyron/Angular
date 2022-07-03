@@ -41,22 +41,22 @@ export class UtilisateurService {
   }
 
   getAllUtilisateur(): Observable<any[]> {
-    return this.http.get<any[]>("http://localhost:3000/utilisateur");
+    return this.http.get<any[]>('https://angular-json-db.herokuapp.com/utilisateur');
   }
 
   getUtilisateur(id: number): Observable<any> {
-    return this.http.get<any>("http://localhost:3000/utilisateur/" + id);
+    return this.http.get<any>("https://angular-json-db.herokuapp.com/utilisateur/" + id);
   }
 
   create(utilisateur: any): Observable<any> {
-    return this.http.post("http://localhost:3000/utilisateur/", utilisateur);
+    return this.http.post("http://angular-json-db.herokuapp.com/utilisateur/", utilisateur);
   }
 
   delete(utilisateur:any): Observable<any> {
-    return this.http.delete("http://localhost:3000/utilisateur/"+utilisateur.id,)
+    return this.http.delete("http://angular-json-db.herokuapp.com/utilisateur/"+utilisateur.id,)
   }
 
   update(utilisateur:any): Observable<any>{
-    return this.http.put("http://localhost:3000/utilisateur/"+utilisateur.id,utilisateur);
+    return this.http.put("http://angular-json-db.herokuapp.com/utilisateur/"+utilisateur.id,utilisateur);
   }
 }

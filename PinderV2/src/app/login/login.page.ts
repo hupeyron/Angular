@@ -14,6 +14,7 @@ import { UtilisateurService } from 'src/service/utilisateurService';
 })
 export class LoginPage{
 
+  
   data : any;
 
   user: any={
@@ -32,6 +33,8 @@ export class LoginPage{
   ngOnInit(){}
 
   async connexion(){
+    console.log(this.user.email);
+    console.log(this.user.motDePasse);
     let result:boolean = this.userService.connection(this.user.email,this.user.motDePasse);
     
 

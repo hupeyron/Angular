@@ -33,7 +33,7 @@ export class ComptePage{
     this.storage.get('id').then((val) => {
       this.id = val;
       
-      axios.get('http://localhost:3000/utilisateur', {
+      axios.get('https://angular-json-db.herokuapp.com/utilisateur', {
         params: {
           id: this.id
         }
@@ -50,7 +50,7 @@ export class ComptePage{
    }
 
   submitForm() {
-    axios.put('http://localhost:3000/utilisateur/'+ this.id, {
+    axios.put('https://angular-json-db.herokuapp.com/utilisateur/'+ this.id, {
         email: this.user.email,
         pseudo: this.user.pseudo,
         description: this.user.description,
