@@ -116,9 +116,6 @@ export class PinerPage {
       return;
     }
     console.log(this.currentIndex);
-    
-    
-    
     this.default[this.currentIndex].visible = false;
     this.currentIndex--;
     let toast = this.toastCtrl.create({

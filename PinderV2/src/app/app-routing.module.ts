@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'piner',
     loadChildren: () => import('./piner/piner.module').then( m => m.PinerPageModule)
   },
+  {
+    path: 'pins',
+    loadChildren: () => import('./pins/pins.module').then( m => m.PinsPageModule)
+  },
 
 ];
 

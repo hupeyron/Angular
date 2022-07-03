@@ -44,27 +44,5 @@ export class HomePage {
       console.log('ID : ', val);
     });
   }
-
-  async piner(slides){
-    let toast = this.toastCtrl.create({
-      message: 'je pine',
-      duration: 2000,
-      position: 'top',
-      color: 'danger'
-    });
-    (await (toast)).present();
-    slides.slideNext(); 
-   }
-
-   async nexter(slides){
-    let toast = this.toastCtrl.create({
-      message: 'je next',
-      duration: 2000,
-      position: 'top',
-      color: 'danger'
-    });
-    (await (toast)).present();
-    slides.slideNext(); 
-   }
   
 }

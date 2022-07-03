@@ -36,7 +36,7 @@ export class AppComponent {
          },
          {
            title : 'Vos pin',
-           url   : '#',
+           url   : '/pins',
          },
          {
            title : 'Votre compte',
